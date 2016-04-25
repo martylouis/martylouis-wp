@@ -1,0 +1,250 @@
+
+// Import all the things!
+@import "bootstrap";
+@import "responsive";
+
+// Fix that box model
+* { .box-sizing(border-box); }
+
+//fix inline-block
+.inline-block { display: inline-block; .ie7-inline-block(); }
+
+//==========================================================================
+// Typography
+//==========================================================================
+
+//body { background: white url(../images/grid-24.png) 0 0; } // baseline grid bg
+
+// Meat & Potatoes
+@fontsize:	16;
+@baseline:	@fontsize * 1.5;
+@lineheight: @baseline / @fontsize;
+@baseLineHeight: @baseline * 1px; // clear out so we can manually change all the things!
+
+.font(@size) { @font-size: @size / @fontsize; @lineheight: @baseline / @size; font-size: ~"@{font-size}em";	/*font-size: ~"@{font-size}rem";*/	line-height: @lineheight; }
+.heading(@size) {.font(@size); @margin: @baseline / @size; margin: ~"@{margin}em" 0; }
+//.heading(@size) when (@size > @baseline) { line-height: @baseline / @size * 2; }
+.heading(@size) when (@size > @baseline) { line-height: 1; } // testing
+.text(@size) { .font(@size); margin: ~"@{lineheight}em" 0; }
+.text(@size) when (@size > @baseline), (@size = @baseline) { line-height: 1.5; }
+
+html { font-size: percentage(@fontsize / 16); }
+body { .font(@fontsize); -webkit-font-smoothing: antialiased; }
+
+// Fibonacci
+h1 { .heading(@fontsize + 21); }
+h2 { .heading(@fontsize + 13); }
+h3 { .heading(@fontsize + 8); }
+h4 { .heading(@fontsize + 5); }
+h5 { .heading(@fontsize + 3); }
+h6 { .heading(@fontsize + 2); }
+p { .text(@fontsize);	
+	em { font-style: italic; font-weight: 100; }
+	strong { font-weight: 800; }
+}
+// Fix images
+img { margin-bottom: @baseLineHeight;
+	+ p { margin-top: 0; }
+}
+
+blockquote p { .text(18); }
+ul, ol, dl { margin: ~"@{lineheight}em" 3em;
+	li { line-height: inherit; }
+}
+dt, dd { line-height: @lineheight; }
+dd { margin-bottom: ~"@{lineheight}em"; }
+pre { background: #333; color: #bbb; border: none; padding: 24px; line-height: 24px;
+	code { line-height: 24px; }
+}
+code { .text(13); line-height: inherit; margin-bottom: -2px; }
+table { line-height: 22px; } // TB overwrite to keep it tidy
+
+q:before { content: "\201C"; }
+q:after { content: "\201D" }
+
+input[type="text"] { height: 30px; }
+
+
+// Font faces
+@font-face {font-family: 'EntypoRegular'; src: url('../font/entypo-webfont.eot'); src: url('../font/entypo-webfont.eot?#iefix') format('embedded-opentype'), url('../font/entypo-webfont.woff') format('woff'), url('../font/entypo-webfont.ttf') format('truetype'), url('../font/entypo-webfont.svg#EntypoRegular') format('svg'); font-weight: normal; font-style: normal; }
+.entypo { font-family: "EntypoRegular"; font-weight: normal; font-style: normal; display: inline-block; text-align: center; }
+i.entypo-help:after { .entypo; content: 'a'; }
+i.entypo-help-alt:before { .entypo; content: 'b'; }
+
+.paragraph() { font-family: 'proxima-nova', sans-serif; }
+.headings() { font-family: 'proxima-nova', sans-serif; }
+
+
+//*==================================================================
+//	Layout
+//*==================================================================
+
+@ratio: 3/4;
+@rCol: percentage(@ratio);
+@lCol: 100 - @rCol;
+#header { width: @lCol; position: fixed; top: 0; bottom: 0; left: 0; right: 0; }
+#content { margin-left: @lCol; width: @rCol; max-width: 1020px; 
+	.wrapper { padding: @baseLineHeight 5% 0; width: 100%; }
+}
+
+
+
+//*==================================================================
+//	Theme
+//*==================================================================
+
+// Color Palatte
+
+@gray:			hsl(200, 0%, 50%);
+@blue:			hsl(200, 80%, 55%);
+@dark:			hsl(200, 15%, 25%);
+@lite:			hsl(205, 30%, 80%);
+
+@textColor: 	#ccc;
+@linkColor: 	@blue;
+
+@bodyBg: 		hsl(42, 0%, 70%);
+
+
+body { background: url(../images/pattern.jpg) 0 0; }
+#bg { position: fixed; top: 0; bottom: 0; left: 0; right: 0; #gradient > .vertical(darken(@blue, 40%), black); z-index: -100; .opacity(65); }
+
+body, p { color: @textColor; .paragraph; }
+a { border-bottom: 1px dotted lighten(@linkColor, 20%); font-weight: 600; 
+	&:hover { text-decoration: none; }
+}
+h1,h2,h3,h4,h5,h6 { color: white; .headings; }
+
+//*==================================================================
+//	Sections
+//*==================================================================
+
+.wrapper { .clearfix; }
+
+#header { color: white;
+	h1 { text-transform: uppercase; font-weight: 700; color: white; }
+	a { border: none; color: inherit; }	
+	p { color: white; }
+}
+
+#hero { text-align: left; padding: @baseLineHeight;
+	p { .font(18); }
+	a.btn { .font(28); .headings; font-weight: 300; }
+}
+
+#logo { width: 62px; height: 31px;
+	a { background: url(../images/martylouis-logo.png) 0 0 no-repeat; display: block; width: 62px; height: 31px; text-indent: -999999px; }
+}
+
+#hireme { margin: @baseLineHeight*3 0;
+	p { .font(28); margin: 0.5em 0; }
+	a.btn { padding: 8px 30px; }
+}
+
+#social { list-style: none; margin: 0;
+	.social-icons { .font(24); margin: 0; padding: 0; }
+	li { display: inline; }
+	p { margin: @baseLineHeight*.5 0; }
+}
+
+
+#content {
+	.wrapper { background: rgba(255,255,255, 0.15); }
+}
+
+
+#footer {
+	.wrapper { background: none; padding: 0; }
+	p { color: #aaa; }
+}
+
+//*==================================================================
+//	Common
+//*==================================================================
+
+.page-title { border-bottom: 1px solid rgba(255,255,255, 0.15); margin-bottom: @baseLineHeight;
+	h1 { font-weight: 300; color: white;    }
+	a.icon { border: none; color: darken(@white, 30%); }
+	p { color: darken(@bodyBg, 40%); .font(18); margin: @baseLineHeight*.5 0; }
+}
+
+.page-nav {
+	a { border: none; color: @dark; }
+}
+
+.post {}
+.post-title a { border-bottom: none; color: @dark; }
+.post-header { border-bottom: 1px solid #ccc; margin: 2em 0;
+	h1 { .heading(72); text-align: center; margin-bottom: 1em; text-shadow: 1px 1px 0 white, 3px 3px 0 @lite; }
+}
+
+.post-meta p { text-align: right; }
+
+.post-thumb { background: darken(black, 5%); margin-bottom: @baseLineHeight; text-align: center; .border-radius(4px); max-width: 480px;
+	img { margin-bottom: 0; .border-radius(4px 4px 0 0); .box-shadow(0 1px 5px rgba(0,0,0,.20)); max-width: auto; }
+}
+.post-thumb-meta { background: white; color: @dark; padding: 10px; .font(14); font-weight: 600; text-align: left; overflow: hidden; .border-radius(0 0 4px 4px); .box-shadow(0 1px 5px rgba(0,0,0,.20));
+	a { border-bottom: none; }
+}
+
+.post-tags a { background: darken(@bodyBg, 15%); .font(14); color: white; font-weight: 600; margin: 0 1px; padding: 0 3px; .border-radius(3px); 
+	&:hover { background: darken(@bodyBg, 25%); }
+}
+
+//==========================================================================
+//   Media Q's
+//==========================================================================
+
+// Large
+@media (min-width: 1200px) {
+
+}
+
+
+// Tablets and small screens
+@media (min-width: 768px) and (max-width: 979px) { 
+	body { padding: 0; }
+	#header { position: static; width: 100%; padding-bottom: @baseLineHeight; }
+	#hero { text-align: center; }
+	#logo { margin: 0 auto; }
+	#hireme { margin: @baseLineHeight 0; }
+	#content { width: 100%; margin: 0;
+		.container-fluid { padding: 0; } 
+		.wrapper { padding: 0 5%; }
+	}
+	#footer .wrapper { padding: 0; }
+}
+
+
+// Smallest
+@media screen and (max-width: 767px) {
+
+	body { padding: 0; }
+	#header { position: static; width: 100%; padding-bottom: @baseLineHeight; }
+	
+	#hero { text-align: center; }
+	#logo { margin: 0 auto; }
+	#hireme { margin: @baseLineHeight 0; }
+	#content { width: 100%; margin: 0;
+		.wrapper { padding: 0 5%; }
+	}
+	#footer .wrapper { padding: 0; }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
