@@ -17,7 +17,7 @@ require_once locate_template('/inc/widgets.php');         // Sidebars and widget
 require_once locate_template('/inc/custom.php');          // Custom functions
 
 function martylouis_setup() {
-  
+
   // Register wp_nav_menu() menus (http://codex.wordpress.org/Function_Reference/register_nav_menus)
   register_nav_menus(array(
   	'primary' => __('Primary Navigation', 'martylouis'),
@@ -37,3 +37,15 @@ function martylouis_setup() {
 }
 
 add_action('after_setup_theme', 'martylouis_setup');
+
+
+// Tweak Next/Prev posts links
+add_filter('next_posts_link_attributes', 'posts_link_attributes_1');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes_2');
+
+function posts_link_attributes_1() {
+    return 'class="next-posts"';
+}
+function posts_link_attributes_2() {
+    return 'class="prev-posts"';
+}

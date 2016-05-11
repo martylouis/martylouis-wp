@@ -1,21 +1,20 @@
-Project List
-======
+# Site Map
 
-http://sterkly.com
-http://sambreel.com
-http://celebsforsale.net
-http://visit-socal.com
-http://dev.martylouis.com/clients/sambreel/bvd/landing/v2
-http://dev.martylouis.com/clients/sambreel/bvd/landing/v1
-http://dev.martylouis.com/clients/sambreel/freetwittube
-http://dev.martylouis.com/clients/sambreel/admatter
+/topic/archive
+topics/client/sterkly
+topics/client/sambreel
+  /sambreel/bvd/landing/v1
+  /sambreel/bvd/landing/v2
+  /sambreel/freetwittube
+  /sambreel/admatter
+topics/client/celebsforsale
+topics/client/visit-socal
 
-
-http://dev.martylouis.com/clients/travelstorm/templates/ndrm
-http://dev.martylouis.com/clients/travelstorm/templates/atlantic-realty
-http://dev.martylouis.com/clients/travelstorm/templates/perdido-key
-http://dev.martylouis.com/clients/travelstorm/templates/imagine
-http://dev.martylouis.com/clients/travelstorm/templates/rockies
-http://dev.martylouis.com/clients/travelstorm/templates/rockymtn
-http://dev.martylouis.com/clients/travelstorm/templates/tasteofthebeach
-http://dev.martylouis.com/clients/travelstorm
+/client/travelstorm
+/client/travelstorm/templates/ndrm
+/client/travelstorm/templates/atlantic-realty
+/client/travelstorm/templates/perdido-key
+/client/travelstorm/templates/imagine
+/client/travelstorm/templates/rockies
+/client/travelstorm/templates/rockymtn
+/client/travelstorm/templates/tasteofthebeach
