@@ -5,7 +5,7 @@
 			<div class="span12">
 				<div id="hero" class="wrapper">
 					<a id="logo">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/martylouis-logo.png" alt="martylouis logo" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/martylouis-logo.png?061116" alt="martylouis logo" />
           </a>
 					<p><?php _e('Marty Louis makes websites in Florida, USA.') ?></p>
 					<p class="hireme"><a class="button" href="mailto:hello@martylouis.com">Work With Me »</a></p>
