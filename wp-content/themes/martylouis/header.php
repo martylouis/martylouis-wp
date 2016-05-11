@@ -11,9 +11,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/modernizr.custom-2.5.1.min.js"></script>
