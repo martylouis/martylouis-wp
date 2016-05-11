@@ -7612,7 +7612,8 @@ a:hover {
   letter-spacing: 0.05em;
 }
 .post-tags a:hover {
-  background: #737373;
+  background: #35464A;
+  color: white;
 }
 .post-link a {
   color: #FF7559;

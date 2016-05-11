@@ -15,13 +15,17 @@
 		<div class="span6">
 
 			<?php $sitelink = get_post_meta($post->ID, 'Website', true); ?>
+      <?php $post_thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full', false); ?>
 
 			<div class="post-thumb">
-				<?php if(has_post_thumbnail()): ?>
-					<a href="<?php if($sitelink): echo $sitelink; else: echo the_permalink(); endif; ?>" target="_blank" title="<?php the_title(); ?>">
-						<?php $post_thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full', $icon = false, $attr = ''); ?>
-						<img src="<?php echo $post_thumb[0]; ?>" alt="<?php the_title(); ?>">
-					</a>
+				<?php if( has_post_thumbnail() ): ?>
+          <?php if ($sitelink): ?>
+  					<a href="<?php echo $sitelink; ?>" target="_blank" title="<?php the_title(); ?>">
+              <img src="<?php echo $post_thumb[0]; ?>" alt="<?php the_title(); ?>">
+            </a>
+          <?php else: ?>
+            <img src="<?php echo $post_thumb[0]; ?>" alt="<?php the_title(); ?>">
+          <?php endif; ?>
 				<?php endif; ?>
 				<div class="post-thumb-meta">
 					<?php /* <div class="pull-left"><?php the_title(); ?></div> */ ?>
