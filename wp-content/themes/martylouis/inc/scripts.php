@@ -1,7 +1,7 @@
 <?php
 
 function martylouis_scripts() {
-	wp_enqueue_style('martylouis', get_template_directory_uri() . '/assets/css/main.min.css', false, null);
+	wp_enqueue_style('martylouis', get_template_directory_uri() . '/assets/css/main.min.css?vnwe942', false, null);
 
 	// jQuery is loaded in header.php using the same method from HTML5 Boilerplate:
 	// Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline

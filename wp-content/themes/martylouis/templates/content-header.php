@@ -7,7 +7,7 @@
 					<a id="logo">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/martylouis-logo.png?061116" alt="martylouis logo" />
           </a>
-					<p><?php _e('Marty Louis makes websites in Florida, USA.') ?></p>
+					<p><?php _e('I build flexible custom websites for small to medium–sized businesses.') ?></p>
 					<p class="hireme"><a class="button" href="mailto:hello@martylouis.com">Work With Me »</a></p>
 					<ul class="social-icons">
 						<li><a href="http://twitter.com/martylouis/" target="_blank" title="Follow martylouis on twitter">Twitter &rsaquo;</a></li>
