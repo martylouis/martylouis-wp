@@ -33,7 +33,7 @@
 						<div class="pull-left post-tags"><?php echo get_the_tag_list($before = '', $sep = '', $after = ''); ?></div>
 						<?php if($sitelink): ?>
 							<div class="pull-right post-link">
-							  <a href="<?php echo $sitelink; ?>" rel="nofollow" title="View the site" target="_blank">View Website &rsaquo;</a>
+							  <a href="<?php echo $sitelink; ?>" rel="nofollow" title="View the site" target="_blank">View Website &rarr;</a>
 							</div>
 						<?php endif; ?>
 					</div>
