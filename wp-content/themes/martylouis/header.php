@@ -12,7 +12,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon-128.png" sizes="16x16 32x32 64x64 128x128" type="image/png">
+  <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-touch-icon.png">
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/modernizr.custom-2.5.1.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
