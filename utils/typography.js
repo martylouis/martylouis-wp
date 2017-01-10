@@ -15,9 +15,9 @@ const options = {
       ]
     },
     {
-      name: 'Roboto Mono',
+      name: 'Roboto Condensed',
       styles: [
-        '400'
+        '700'
       ]
     }
   ],

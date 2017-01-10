@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import NavLink from './NavLink';
+import { prefixLink } from 'gatsby-helpers'
 import { slugify } from '../utils/helpers.js'
 
 class Navigation extends React.Component {
@@ -10,11 +11,11 @@ class Navigation extends React.Component {
 
     return(
       <div>
-        { !links === [] ? (
+        { links ? (
           <ul className="nav">
             {
               links.map(
-                (nav, index) => <li className={`nav-item nav-item-${slugify(nav.label)}`} key={index}><NavLink to={`/${nav.url}`}>{nav.label}</NavLink></li>
+                (nav, index) => <li className={`nav-item nav-item-${slugify(nav.title)}`} key={index}><NavLink to={nav.url}>{nav.title}</NavLink></li>
               )
             }
           </ul>
@@ -22,6 +23,10 @@ class Navigation extends React.Component {
       </div>
     )
   }
+}
+
+Navigation.propTypes = {
+  links: React.PropTypes.array,
 }
 
 export default Navigation;

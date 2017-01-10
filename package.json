@@ -3,12 +3,14 @@
   "description": "Gatsby static site martylouis.com",
   "version": "1.0.0",
   "author": "Marty Thierry <marty@martylouis.com>",
+  "repository": "https://github.com/martylouis/martylouis.com",
   "dependencies": {
     "front-matter": "^2.0.7",
     "gatsby": "^0.12.6",
     "highlight.js": "^9.6.0",
     "history": "^2.0.2",
     "js-yaml": "^3.6.0",
+    "loadash": "0.0.1",
     "markdown-it": "^7.0.1",
     "markdown-it-abbr": "^1.0.3",
     "markdown-it-attrs": "^0.6.3",
@@ -16,13 +18,15 @@
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-sub": "^1.0.0",
     "object-assign": "^4.1.0",
-    "react-helmet": "^3.1.0",
     "react-headroom": "^2.1.2",
+    "react-helmet": "^3.1.0",
     "react-responsive-grid": "^0.3.3",
     "react-typography": "^0.12.0",
+    "safe-access": "^0.1.0",
     "toml-js": "0.0.8",
     "typography": "^0.13.0",
-    "typography-plugin-code": "^0.13.0"
+    "typography-plugin-code": "^0.13.0",
+    "underscore.string": "^3.3.4"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0"
