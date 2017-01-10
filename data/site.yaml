@@ -1,10 +1,4 @@
-nav:
-  - label: Work
-    url: work/
-  - label: Blog
-    url: blog/
-  - label: Contact
-    url: contact/
+
 
 social:
   - title: Twitter
