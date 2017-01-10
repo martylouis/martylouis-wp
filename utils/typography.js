@@ -10,8 +10,14 @@ const options = {
       name: 'Roboto',
       styles: [
         '400',
-        '400i',        
+        '400i',
         '700'
+      ]
+    },
+    {
+      name: 'Roboto Mono',
+      styles: [
+        '400'
       ]
     }
   ],
