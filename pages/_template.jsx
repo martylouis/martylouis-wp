@@ -4,16 +4,18 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
 import '../css/markdown-styles'
-
 import { rhythm } from '../utils/typography'
+import siteData from '../data/site.yaml'
+import Navigation from '../components/Navigation'
 
 module.exports = React.createClass({
-  propTypes () {
+  propTypes() {
     return {
       children: React.PropTypes.any,
     }
   },
-  render () {
+
+  render() {
     return (
       <div>
         <Headroom
@@ -40,6 +42,7 @@ module.exports = React.createClass({
             >
               Your Brand!
             </Link>
+            <Navigation links={siteData.nav} />
           </Container>
         </Headroom>
         <Container

@@ -1,0 +1,17 @@
+nav:
+  - label: Work
+    url: work/
+  - label: Blog
+    url: blog/
+  - label: Contact
+    url: contact/
+
+social:
+  - title: Twitter
+    url: https://twitter.com/martylouis
+  - title: GitHub
+    url: https://github.com/martylouis
+  - title: Instagram
+    url: https://instagram.com/martylouis
+  - title: LinkedIn
+    url: https://linkedin.com/in/martylouis
