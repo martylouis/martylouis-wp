@@ -22,9 +22,6 @@ module.exports = React.createClass({
           wrapperStyle={{
             marginBottom: rhythm(1),
           }}
-          style={{
-            background: '#252525'
-          }}
         >
           <Container
             style={{
@@ -36,11 +33,11 @@ module.exports = React.createClass({
             <Link
               to={prefixLink('/')}
               style={{
-                color: 'white',
+                color: '#00BB72',
                 textDecoration: 'none',
               }}
             >
-              Your Brand!
+              martylouis.com
             </Link>
             <Navigation links={siteData.nav} />
           </Container>
