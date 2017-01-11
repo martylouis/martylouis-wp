@@ -15,7 +15,7 @@ class Navigation extends React.Component {
           <ul className="nav">
             {
               links.map(
-                (nav, index) => <li className={`nav-item nav-item-${slugify(nav.title)}`} key={index}><NavLink to={nav.url}>{nav.title}</NavLink></li>
+                (nav, index) => <li className={`nav-item nav-item-${slugify(nav.title)}`} key={index}><NavLink to={prefixLink(nav.url)}>{nav.title}</NavLink></li>
               )
             }
           </ul>
