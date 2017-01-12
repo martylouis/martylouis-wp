@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import NavLink from './NavLink';
 import { prefixLink } from 'gatsby-helpers'
 import { slugify } from '../utils/helpers.js'
+import { HeaderNav } from '../components/Styles.js'
 
 class Navigation extends React.Component {
 
@@ -12,7 +13,7 @@ class Navigation extends React.Component {
     return(
       <div>
         { links ? (
-          <ul className="nav">
+          <HeaderNav>
             {
               links.map(
                 (nav, index) =>
@@ -26,7 +27,7 @@ class Navigation extends React.Component {
                   </li>
               )
             }
-          </ul>
+          </HeaderNav>
         ) : ('') }
       </div>
     )

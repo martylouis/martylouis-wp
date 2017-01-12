@@ -1,13 +1,14 @@
 import React from 'react'
-import { Container } from 'react-responsive-grid'
+// import { Container } from 'react-responsive-grid'
 import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
+import { prefixLink } from 'gatsby-helpers'
 import { rhythm } from 'utils/typography'
-import { headerNav } from 'data/site'
-import Navigation from 'components/Navigation'
-
+import { headerNav } from '../data/site'
+import Navigation from '../components/Navigation'
 import 'css/markdown-styles'
+import Logo from '../components/Logo'
+import { Container, Header } from '../components/Styles'
 
 module.exports = React.createClass({
   propTypes() {
@@ -19,38 +20,14 @@ module.exports = React.createClass({
   render() {
 
     return (
-      <div>
-        <Headroom
-          wrapperStyle={{
-            marginBottom: rhythm(1),
-          }}
-        >
-          <Container
-            style={{
-              maxWidth: 960,
-              paddingTop: 0,
-              padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            }}
-          >
-            <Link
-              to={prefixLink('/')}
-              style={{
-                color: '#00BB72',
-                textDecoration: 'none',
-              }}
-            >
-              martylouis.com
-            </Link>
+      <div className="root">
+        <Header>
+          <Headroom>
+            <Logo />
             <Navigation links={headerNav} />
-          </Container>
-        </Headroom>
-        <Container
-          style={{
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            paddingTop: 0,
-          }}
-        >
+          </Headroom>
+        </Header>
+        <Container>
           {this.props.children}
         </Container>
       </div>
