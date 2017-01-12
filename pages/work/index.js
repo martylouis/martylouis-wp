@@ -1,31 +1,30 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
 import Helmet from "react-helmet"
 import { config } from 'config'
 import PostList from '../../components/PostList'
-// import sortBy from 'lodash/sortBy'
-// import access from 'safe-access'
-// import include from 'underscore.string/include'
 
-class PostIndex extends React.Component {
+class WorkIndex extends React.Component {
   render() {
     return (
       <div>
         <Helmet
-          title={`Blog | ${config.siteTitle}`}
+          title={`Work | ${config.siteTitle}`}
           meta={[
             {"name": "description", "content": "Sample"},
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
         <h1>
-          Project Index!
+          Work Index!
         </h1>
-        <PostList postRoute={this.props.route} postDir='projects' />
+        <PostList postRoute={this.props.route} postDir='work' />
       </div>
     )
   }
 }
 
-export default PostIndex
+WorkIndex.propTypes = {
+  route: React.PropTypes.object
+}
+
+export default WorkIndex

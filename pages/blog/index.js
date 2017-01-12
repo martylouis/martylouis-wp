@@ -1,11 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
 import Helmet from "react-helmet"
 import { config } from 'config'
 import PostList from '../../components/PostList'
 
-class PostIndex extends React.Component {
+class BlogIndex extends React.Component {
   render() {
     return (
       <div>
@@ -25,4 +23,8 @@ class PostIndex extends React.Component {
   }
 }
 
-export default PostIndex
+BlogIndex.propTypes = {
+  route: React.PropTypes.object
+}
+
+export default BlogIndex

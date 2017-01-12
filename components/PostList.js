@@ -23,7 +23,6 @@ class PostList extends React.Component {
         // || access(post, 'data.date')
       )
       if (postType) {
-        console.log(post);
         const title = access(post, 'data.title') || post.path
         postListItems.push(
           <li key={post.path} className="post-list-item">

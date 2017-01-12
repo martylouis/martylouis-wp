@@ -3,22 +3,36 @@ import 'css/markdown-styles.css'
 import Helmet from "react-helmet"
 import { config } from 'config'
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      router: React.PropTypes.object,
-    }
-  },
-  render () {
-    const post = this.props.route.page.data
+import PageTemplate from '../components/Templates/PageTemplate'
+import PostTemplate from '../components/Templates/PostTemplate'
+import WorkTemplate from '../components/Templates/WorkTemplate'
+
+class MarkdownWrapper extends React.Component {
+  render() {
+      const { data, file } = this.props.route.page
+      let contentType, contentTemplate
+
+      contentType = file.dirname
+
+      if ( contentType === 'work' ) {
+        contentTemplate = <WorkTemplate {...this.props} />
+      } else if ( contentType === 'post' ) {
+        contentTemplate = <PostTemplate {...this.props} />
+      } else {
+        contentTemplate = <PageTemplate {...this.props} />
+      }
+
     return (
-      <div className="markdown">
-        <Helmet
-          title={`${post.title} | ${config.siteTitle}`}
-        />
-        <h1>{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.body }} />
+      <div className={`markdown ${contentType}`}>
+        <Helmet title={`${data.title} | ${config.siteTitle}`} />
+        {contentTemplate}
       </div>
     )
-  },
-})
+  }
+}
+
+MarkdownWrapper.propTypes = {
+  route: React.PropTypes.object
+}
+
+export default MarkdownWrapper
