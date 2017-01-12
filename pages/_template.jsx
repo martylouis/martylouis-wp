@@ -3,10 +3,11 @@ import { Container } from 'react-responsive-grid'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
-import '../css/markdown-styles'
-import { rhythm } from '../utils/typography'
-import siteData from '../data/site.yaml'
-import Navigation from '../components/Navigation'
+import { rhythm } from 'utils/typography'
+import { headerNav } from 'data/site'
+import Navigation from 'components/Navigation'
+
+import 'css/markdown-styles'
 
 module.exports = React.createClass({
   propTypes() {
@@ -16,6 +17,7 @@ module.exports = React.createClass({
   },
 
   render() {
+
     return (
       <div>
         <Headroom
@@ -39,7 +41,7 @@ module.exports = React.createClass({
             >
               martylouis.com
             </Link>
-            <Navigation links={siteData.nav} />
+            <Navigation links={headerNav} />
           </Container>
         </Headroom>
         <Container
