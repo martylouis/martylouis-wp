@@ -7,7 +7,7 @@
           <a id="logo">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/martylouis-logo.png?061116" alt="martylouis logo" />
           </a>
-          <p><?php _e('Web Design, Development and Strategy.') ?></p>
+          <p><?php _e('Web Design, Development & Support.') ?></p>
           <!-- <p class="hireme"><a class="button" href="mailto:hello@martylouis.com">Contact</a></p> -->
           <ul class="social-icons">
             <li><a href="http://twitter.com/martylouis/" target="_blank" title="Follow martylouis on twitter">Twitter &rsaquo;</a></li>
