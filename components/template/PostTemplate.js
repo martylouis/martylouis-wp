@@ -7,10 +7,10 @@ class PostTemplate extends React.Component {
     const post = route.page.data
 
     return (
-      <div className="post-template">
+      <section>
         <h1>{ post.title }</h1>
         <div dangerouslySetInnerHTML={{ __html: post.body }} />
-      </div>
+      </section>
     )
   }
 }

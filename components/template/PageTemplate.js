@@ -7,10 +7,10 @@ class PageTemplate extends React.Component {
     const page = route.page.data
 
     return (
-      <div className="page-template">
+      <section>
         <h1>{ page.title }</h1>
         <div dangerouslySetInnerHTML={{ __html: page.body }} />
-      </div>
+      </section>
     )
   }
 }

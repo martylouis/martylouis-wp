@@ -7,8 +7,9 @@ import CodePlugin from 'typography-plugin-code'
 const options = {
   googleFonts: [
     {
-      name: 'Roboto',
+      name: 'Merriweather',
       styles: [
+        '300',
         '400',
         '400i',
         '700'
@@ -22,10 +23,10 @@ const options = {
     }
   ],
   headerFontFamily: ['Roboto', 'sans-serif'],
-  bodyFontFamily: ['Roboto', 'sans-serif'],
-  baseFontSize: '18px',
+  bodyFontFamily: ['Merriweather', 'serif'],
+  baseFontSize: '16px',
   baseLineHeight: 1.65,
-  scale: 2.25,
+  scale: 3,
   plugins: [
     new CodePlugin(),
   ],

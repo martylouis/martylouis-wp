@@ -7,10 +7,10 @@ class WorkTemplate extends React.Component {
     const work = route.page.data
 
     return (
-      <div className="work-template">
+      <section>
         <h1>{ work.title }</h1>
         <div dangerouslySetInnerHTML={{ __html: work.body }} />
-      </div>
+      </section>
     )
   }
 }

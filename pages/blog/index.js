@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from "react-helmet"
 import { config } from 'config'
+import Header from '../../components/header'
 import PostList from '../../components/PostList'
 
 class BlogIndex extends React.Component {
@@ -14,6 +15,7 @@ class BlogIndex extends React.Component {
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
+        <Header />
         <h1>
           This is Blog index!
         </h1>
